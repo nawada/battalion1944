@@ -1,21 +1,28 @@
 # サーバーの建て方
 
-※正式リリース前の2019年5月22日の内容を翻訳しています。原文より古い場合があり、本文書と齟齬が発生している可能性があります。その場合は原文を参照してください。  
+※正式リリース前の2019年5月22日の内容を翻訳しています。原文より古い場合があり、本文書と齟齬が発生している可能性があります。その場合は原文を参照してください。
 [原文](http://wiki.battaliongame.com/)
 
 ## 前置き
 
-Server configuration is currently very early in development and as such you may encounter issues whilst setting everything up. We're also aware of features that are currently missing (such as an rcon-like remote admin tool). Please bear with us as we continue to develop the game as well as the community servers/tools. Currently you NEED to have the server exposed to the internet in order to connect to it. We are working on getting the LAN support up and running asap.
+サーバー設定は現在早期開発中、かつ全ての設定時に問題に直面するでしょう。私達は現在、機能が充分でないことも認識しています(例えばRconのようなリモート管理ツールです)。私達と一緒にコミュニティ向けのサーバー/ツールをより良くすることにご協力ください。現在、サーバーに接続するためにはインターネットに接続できる必要があります[訳注:LANサーバーがなかった時の話みたいです]。私達はLANをサポートするために急ぎ作業をしています。
 
 ## ダウンロード
 
-Updated **16/03/2018**
+**2018/3/16** 更新
 
-We now distribute our community servers via Steam. Please use the following command in `steamcmd` to download (includes both Windows + Linux builds):
+私達はSteamを通じてコミュニティサーバーを配布しています。以下の `steamcmd` コマンドを使用してダウンロードしてください(WindowsとLinuxどちらのビルドもあります)。
 
 `app_install 805140`
 
-Alternatively, you can subscribe to the tool on the tools section of your Steam Library.
+[訳注]
+上記コマンドだとエラーになると思います(Ubuntuの場合)。以下のコマンドでいけます。[詳しくはSteamcmdのページ参照](https://developer.valvesoftware.com/wiki/SteamCMD)。
+```bash
+$ steamcmd +login anonymous +force_install_dir ./Battalion1944 +app_update 805140 +quit
+# /home/steam/.steam/steamcmd/Battalion1944 にインストールされる
+```
+
+または、Steamライブラリのツールからインストールすることもできます。
 
 ## セットアップ
 
